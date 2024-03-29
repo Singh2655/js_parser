@@ -61,7 +61,11 @@ export default class Minifier {
       locations: true,
     });
     this.#traverse(originalAST)
-    console.log(JSON.stringify(originalAST,null,2))
     const minifiedCode = escodegen.generate(originalAST,{format:{compact:true}});
+
+    return {
+        minifiedCode,
+        nameMap:this.#nameMap
+    }
   }
 }
