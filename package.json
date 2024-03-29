@@ -1,0 +1,21 @@
+{
+  "name": "js_parser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "clean": "rm -rf **/index.min*",
+    "minifify": "npm run clean && node src/index.js public/index.js",
+    "minifify-and-run": "npm run minifify && npm start",
+    "start": "node public/index.min.js"
+  },
+  "keywords": [],
+  "author": "Singh2655",
+  "license": "ISC",
+  "dependencies": {
+    "acorn": "^8.11.3",
+    "escodegen": "^2.1.0",
+    "ntl": "^5.1.0"
+  }
+}
